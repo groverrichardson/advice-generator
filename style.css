@@ -78,8 +78,10 @@ button {
   position: absolute;
   width: 64px;
   height: 64px;
-  left: 238px;
-  top: 333px;
+  top: 365px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   border-radius: 100px;
   background: #53FFAA;
 }
