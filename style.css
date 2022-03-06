@@ -17,7 +17,6 @@ body {
 }
 
 .card {
-  height: 364px;
   width: 540px;
   max-width: 90vw;
   border-radius: 15px;
@@ -25,6 +24,7 @@ body {
   -webkit-box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
           box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
   position: relative;
+  padding-top: 48px;
 }
 
 .card-copy-container {
@@ -54,12 +54,15 @@ body {
   text-align: center;
   letter-spacing: 4.08571px;
   color: #53FFAA;
+  padding: 0px;
+  margin: 0px;
 }
 
 .quote {
   font-family: Manrope;
   font-style: normal;
   font-weight: 800;
+  max-height: 170px;
   font-size: 28px;
   line-height: 38px;
   text-align: center;
@@ -94,7 +97,7 @@ button {
   position: absolute;
   width: 64px;
   height: 64px;
-  top: 365px;
+  botoom: -65px;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -137,7 +140,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 40px 0px 40px 0px;
+  margin: 40px 0px 72px 0px;
 }
 
 .line {
