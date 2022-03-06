@@ -1,14 +1,26 @@
 'use strict';
 
-const axios = require('axios').default;
+function getAdvice() {
+    fetch('https://api.adviceslip.com/advice')
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error('Unable to fetch student data');
+        })
+        .then((data) => {
+            $('p.quote').text(data.slip.advice);
+        })
+        .catch((err) => this.setState({ error: err.message }));
+}
 
 function watchClick() {
     $('button').click((event) => {
         event.preventDefault();
-        axios.get('https://api.adviceslip.com').then((response) => {
-            console.log(response);
-        });
+
+        getAdvice();
     });
 }
 
+$(getAdvice);
 $(watchClick);
