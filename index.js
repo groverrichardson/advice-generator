@@ -9,7 +9,9 @@ function getAdvice() {
             throw new Error('Unable to fetch student data');
         })
         .then((data) => {
-            $('p.quote').text(data.slip.advice);
+            console.log(data);
+            $('h1.advice-num').text(`ADVICE #${data.slip.id}`);
+            $('p.quote').text(`"${data.slip.advice}"`);
         })
         .catch((err) => this.setState({ error: err.message }));
 }
@@ -22,5 +24,4 @@ function watchClick() {
     });
 }
 
-$(getAdvice);
 $(watchClick);
