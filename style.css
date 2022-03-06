@@ -25,6 +25,19 @@ body {
           box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
   position: relative;
   padding-top: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card-copy-container {
@@ -43,6 +56,7 @@ body {
           align-items: center;
   height: 100%;
   overflow: hidden;
+  max-width: 90%;
 }
 
 .advice-num {
@@ -97,7 +111,7 @@ button {
   position: absolute;
   width: 64px;
   height: 64px;
-  botoom: -65px;
+  bottom: -65px;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
