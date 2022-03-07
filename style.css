@@ -18,6 +18,7 @@ body {
 
 .card {
   width: 540px;
+  min-height: 288px;
   max-width: 90vw;
   border-radius: 15px;
   background: #313A48;
@@ -70,6 +71,10 @@ body {
   color: #53FFAA;
   padding: 0px;
   margin: 0px;
+}
+
+.advice-container {
+  min-height: 160px;
 }
 
 .quote {

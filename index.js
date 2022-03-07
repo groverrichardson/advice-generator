@@ -9,11 +9,15 @@ function getAdvice() {
             throw new Error('Unable to fetch student data');
         })
         .then((data) => {
-            console.log(data);
-            $('h1.advice-num').text(`ADVICE #${data.slip.id}`);
-            $('p.quote').text(`"${data.slip.advice}"`);
+            $('p.quote').fadeOut('400', () => {
+                $('h1.advice-num').text(`ADVICE #${data.slip.id}`);
+                $('p.quote')
+                    .delay('500')
+                    .text(`"${data.slip.advice}"`)
+                    .fadeIn();
+            });
         })
-        .catch((err) => this.setState({ error: err.message }));
+        .catch((err) => console.log(err));
 }
 
 function watchClick() {
